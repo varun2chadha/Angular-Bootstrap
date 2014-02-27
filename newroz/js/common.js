@@ -34,6 +34,7 @@ $(document).ready(function() {
 
 });
 
+
 function displayResult() {
 	var x = document.getElementById("pwd").value;
 	alert(x);
@@ -58,6 +59,8 @@ function validateForm() {
 	}
 
 }
+
+
 function unhide(divID) {
 	var item = document.getElementById(divID);
 	if (item) {

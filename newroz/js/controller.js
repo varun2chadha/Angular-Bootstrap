@@ -17,6 +17,17 @@ function tabController($scope, $http){
 $http.get('../data/Header.json').success(
     	 function(data) {
     		 	$scope.data = data;
+    		 	$scope.rlconversion = function($event) {
+    		 		var _id=$event.currentTarget.id;
+    		 		if(_id=="RTL") {
+    		 			var angular_link =$("link[rel=stylesheet]") 
+						$(angular_link[0]).attr({href : "../css/bootstrap.rtl.css"});
+    		 		}
+    		 		else if(_id=="LTR") {
+    		 			var angular_link =$("link[rel=stylesheet]") 
+						$(angular_link[0]).attr({href : "../css/bootstrap.min.css"});
+    		 		}
+    		 	}
     	 }
     );
 
